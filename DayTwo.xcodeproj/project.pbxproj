@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		44E78F8F234CE55F00C99D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78F8E234CE55F00C99D26 /* AppDelegate.swift */; };
 		44E78F91234CE55F00C99D26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78F90234CE55F00C99D26 /* SceneDelegate.swift */; };
-		44E78F93234CE55F00C99D26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78F92234CE55F00C99D26 /* ViewController.swift */; };
 		44E78F96234CE55F00C99D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E78F94234CE55F00C99D26 /* Main.storyboard */; };
 		44E78F98234CE56000C99D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E78F97234CE56000C99D26 /* Assets.xcassets */; };
 		44E78F9B234CE56000C99D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E78F99234CE56000C99D26 /* LaunchScreen.storyboard */; };
+		44E78FA3234CEC9600C99D26 /* JournalDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78FA2234CEC9600C99D26 /* JournalDetailVC.swift */; };
+		44E78FA5234CECF400C99D26 /* JournalTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78FA4234CECF400C99D26 /* JournalTableVC.swift */; };
+		44E78FA7234CED3900C99D26 /* CreateJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78FA6234CED3900C99D26 /* CreateJournalVC.swift */; };
+		44E78FA9234CEDA000C99D26 /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78FA8234CEDA000C99D26 /* PhotoCollectionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44E78F8B234CE55F00C99D26 /* DayTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E78F8E234CE55F00C99D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E78F90234CE55F00C99D26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44E78F92234CE55F00C99D26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44E78F95234CE55F00C99D26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44E78F97234CE56000C99D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44E78F9A234CE56000C99D26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44E78F9C234CE56000C99D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44E78FA2234CEC9600C99D26 /* JournalDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailVC.swift; sourceTree = "<group>"; };
+		44E78FA4234CECF400C99D26 /* JournalTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableVC.swift; sourceTree = "<group>"; };
+		44E78FA6234CED3900C99D26 /* CreateJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalVC.swift; sourceTree = "<group>"; };
+		44E78FA8234CEDA000C99D26 /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,12 @@
 		44E78F8D234CE55F00C99D26 /* DayTwo */ = {
 			isa = PBXGroup;
 			children = (
+				44E78FA6234CED3900C99D26 /* CreateJournalVC.swift */,
+				44E78FA2234CEC9600C99D26 /* JournalDetailVC.swift */,
+				44E78FA4234CECF400C99D26 /* JournalTableVC.swift */,
+				44E78FA8234CEDA000C99D26 /* PhotoCollectionVC.swift */,
 				44E78F8E234CE55F00C99D26 /* AppDelegate.swift */,
 				44E78F90234CE55F00C99D26 /* SceneDelegate.swift */,
-				44E78F92234CE55F00C99D26 /* ViewController.swift */,
 				44E78F94234CE55F00C99D26 /* Main.storyboard */,
 				44E78F97234CE56000C99D26 /* Assets.xcassets */,
 				44E78F99234CE56000C99D26 /* LaunchScreen.storyboard */,
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E78F93234CE55F00C99D26 /* ViewController.swift in Sources */,
 				44E78F8F234CE55F00C99D26 /* AppDelegate.swift in Sources */,
+				44E78FA9234CEDA000C99D26 /* PhotoCollectionVC.swift in Sources */,
 				44E78F91234CE55F00C99D26 /* SceneDelegate.swift in Sources */,
+				44E78FA3234CEC9600C99D26 /* JournalDetailVC.swift in Sources */,
+				44E78FA7234CED3900C99D26 /* CreateJournalVC.swift in Sources */,
+				44E78FA5234CECF400C99D26 /* JournalTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
