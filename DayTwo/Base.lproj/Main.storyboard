@@ -101,9 +101,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="t5t-bj-DyT">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZZr-n6-cbk">
+                                    <rect key="frame" x="0.0" y="85" width="414" height="130"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-3T-CjS">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="130"/>
+                                            <state key="normal" image="whiteCamera"/>
+                                            <connections>
+                                                <action selector="cameraBtnPressed:" destination="nQz-Fy-cPc" eventType="touchUpInside" id="8t3-aa-8M7"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDE-lu-hXq">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="130"/>
+                                            <state key="normal" title="Button" image="add"/>
+                                            <connections>
+                                                <action selector="addBtnPressed:" destination="nQz-Fy-cPc" eventType="touchUpInside" id="0Zg-Ue-WHE"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ZZr-n6-cbk" secondAttribute="trailing" id="LWg-ZR-vqX"/>
+                                <constraint firstItem="ZZr-n6-cbk" firstAttribute="top" secondItem="t5t-bj-DyT" secondAttribute="top" constant="85" id="cd3-Cs-brz"/>
+                                <constraint firstAttribute="bottom" secondItem="ZZr-n6-cbk" secondAttribute="bottom" constant="85" id="fR0-GV-Lxl"/>
+                                <constraint firstItem="ZZr-n6-cbk" firstAttribute="leading" secondItem="t5t-bj-DyT" secondAttribute="leading" id="tSr-51-7s8"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xzr-pu-3Od">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="328" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xzr-pu-3Od" id="edD-eo-Mrj">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -117,17 +149,22 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="zbU-SQ-LMQ"/>
+                    <connections>
+                        <outlet property="whiteCameraBtn" destination="jaN-3T-CjS" id="qak-S6-RBD"/>
+                        <outlet property="whitePlusBtn" destination="lDE-lu-hXq" id="xvA-2x-wbi"/>
+                        <segue destination="CIe-KW-sby" kind="presentation" identifier="createNew" id="JGn-BG-6Ne"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0c-k2-Zpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="-887"/>
+            <point key="canvasLocation" x="1605.7971014492755" y="-887.27678571428567"/>
         </scene>
         <!--Create JournalVC-->
         <scene sceneID="1lf-E2-Ub5">
             <objects>
                 <viewController id="CIe-KW-sby" customClass="CreateJournalVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tw-d1-S3R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="vJH-X1-c3b"/>
@@ -151,4 +188,8 @@
             <point key="canvasLocation" x="-666" y="-236"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="256" height="256"/>
+        <image name="whiteCamera" width="256" height="256"/>
+    </resources>
 </document>
