@@ -188,11 +188,34 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPk-pR-2A0">
+                                <rect key="frame" x="0.0" y="56" width="414" height="633"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <datePicker hidden="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nkN-A8-Sid">
+                                <rect key="frame" x="0.0" y="56" width="414" height="590"/>
+                            </datePicker>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef7-Im-xDa">
+                                <rect key="frame" x="110" y="654" width="194" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="20"/>
+                                <state key="normal" title="Set Date">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="setDateBtnPressed:" destination="CIe-KW-sby" eventType="touchUpInside" id="aGz-w5-t62"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-Cw-VEF">
-                                <rect key="frame" x="0.0" y="732" width="414" height="110"/>
+                                <rect key="frame" x="0.0" y="697" width="414" height="111"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ytN-18-AbC">
-                                        <rect key="frame" x="10" y="10" width="180" height="85"/>
+                                        <rect key="frame" x="8" y="13" width="180" height="85"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTD-9K-4CN">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
@@ -220,66 +243,45 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ytN-18-AbC" firstAttribute="top" secondItem="YaE-7g-3bk" secondAttribute="top" constant="10" id="9rN-Zj-lKo"/>
-                                    <constraint firstAttribute="bottom" secondItem="ytN-18-AbC" secondAttribute="bottom" id="E5a-5Y-Ald"/>
-                                    <constraint firstItem="YaE-7g-3bk" firstAttribute="bottom" secondItem="ytN-18-AbC" secondAttribute="bottom" constant="15" id="Gsc-wO-9BS"/>
-                                    <constraint firstAttribute="trailing" secondItem="ytN-18-AbC" secondAttribute="trailing" constant="224" id="P4d-RF-xBZ"/>
-                                    <constraint firstItem="ytN-18-AbC" firstAttribute="leading" secondItem="YaE-7g-3bk" secondAttribute="leading" constant="10" id="khW-PY-r3V"/>
+                                    <constraint firstItem="ytN-18-AbC" firstAttribute="leading" secondItem="JPF-Cw-VEF" secondAttribute="leadingMargin" id="5BE-4F-Rif"/>
+                                    <constraint firstAttribute="bottom" secondItem="ytN-18-AbC" secondAttribute="bottom" constant="13" id="bz6-JW-1X1"/>
+                                    <constraint firstAttribute="trailing" secondItem="ytN-18-AbC" secondAttribute="trailing" constant="226" id="cqb-nc-DVY"/>
+                                    <constraint firstItem="ytN-18-AbC" firstAttribute="centerY" secondItem="JPF-Cw-VEF" secondAttribute="centerY" id="dj8-SW-p8l"/>
+                                    <constraint firstItem="ytN-18-AbC" firstAttribute="top" secondItem="IIq-iA-E3F" secondAttribute="top" constant="13" id="ipL-AG-Gcn"/>
                                 </constraints>
+                                <viewLayoutGuide key="safeArea" id="IIq-iA-E3F"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="0nn-Ue-FNJ"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="YaE-7g-3bk"/>
                             </scrollView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gPk-pR-2A0">
-                                <rect key="frame" x="0.0" y="56" width="414" height="676"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef7-Im-xDa">
-                                <rect key="frame" x="110" y="688" width="194" height="36"/>
-                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="20"/>
-                                <state key="normal" title="Set Date">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="setDateBtnPressed:" destination="CIe-KW-sby" eventType="touchUpInside" id="aGz-w5-t62"/>
-                                </connections>
-                            </button>
-                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nkN-A8-Sid">
-                                <rect key="frame" x="0.0" y="540" width="414" height="140"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="HTC-5U-9TV"/>
-                                </constraints>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="gPk-pR-2A0" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" id="4Gi-A1-8sY"/>
+                            <constraint firstItem="nkN-A8-Sid" firstAttribute="leading" secondItem="3tw-d1-S3R" secondAttribute="leading" id="0j3-Ro-XCw"/>
+                            <constraint firstAttribute="trailing" secondItem="JPF-Cw-VEF" secondAttribute="trailing" id="1iS-WZ-e3O"/>
+                            <constraint firstItem="gPk-pR-2A0" firstAttribute="leading" secondItem="3tw-d1-S3R" secondAttribute="leading" id="4Gi-A1-8sY"/>
+                            <constraint firstAttribute="trailing" secondItem="nkN-A8-Sid" secondAttribute="trailing" id="7P4-kC-JEe"/>
                             <constraint firstItem="gPk-pR-2A0" firstAttribute="top" secondItem="ei7-ir-DHy" secondAttribute="bottom" id="7Yn-bn-2ny"/>
-                            <constraint firstItem="nkN-A8-Sid" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" id="87d-XG-LdA"/>
                             <constraint firstItem="Ef7-Im-xDa" firstAttribute="top" secondItem="nkN-A8-Sid" secondAttribute="bottom" constant="8" id="FAu-mn-E3F"/>
-                            <constraint firstItem="ei7-ir-DHy" firstAttribute="trailing" secondItem="vJH-X1-c3b" secondAttribute="trailing" id="Iub-ji-7Wx"/>
-                            <constraint firstItem="JPF-Cw-VEF" firstAttribute="top" secondItem="gPk-pR-2A0" secondAttribute="bottom" id="V9z-iH-2ZW"/>
-                            <constraint firstItem="ei7-ir-DHy" firstAttribute="top" secondItem="vJH-X1-c3b" secondAttribute="top" id="aI3-IF-KhJ"/>
-                            <constraint firstItem="vJH-X1-c3b" firstAttribute="trailing" secondItem="Ef7-Im-xDa" secondAttribute="trailing" constant="110" id="aTB-aD-uq2"/>
+                            <constraint firstItem="ei7-ir-DHy" firstAttribute="trailing" secondItem="3tw-d1-S3R" secondAttribute="trailing" id="Iub-ji-7Wx"/>
+                            <constraint firstItem="nkN-A8-Sid" firstAttribute="top" secondItem="ei7-ir-DHy" secondAttribute="bottom" id="Kaq-aE-L9N"/>
+                            <constraint firstItem="JPF-Cw-VEF" firstAttribute="leading" secondItem="3tw-d1-S3R" secondAttribute="leading" id="SHg-63-B8y"/>
+                            <constraint firstItem="ei7-ir-DHy" firstAttribute="top" secondItem="3tw-d1-S3R" secondAttribute="top" id="aI3-IF-KhJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ef7-Im-xDa" secondAttribute="trailing" constant="110" id="aTB-aD-uq2"/>
                             <constraint firstItem="JPF-Cw-VEF" firstAttribute="leading" secondItem="ei7-ir-DHy" secondAttribute="leading" id="cPf-vJ-3bD"/>
-                            <constraint firstAttribute="trailing" secondItem="nkN-A8-Sid" secondAttribute="trailing" id="iNR-Bi-KeL"/>
-                            <constraint firstItem="vJH-X1-c3b" firstAttribute="trailing" secondItem="gPk-pR-2A0" secondAttribute="trailing" id="jTq-HJ-Ggz"/>
-                            <constraint firstItem="ei7-ir-DHy" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" id="mcf-Ky-Y0Q"/>
-                            <constraint firstAttribute="bottom" secondItem="JPF-Cw-VEF" secondAttribute="bottom" id="uno-AX-CAq"/>
-                            <constraint firstItem="JPF-Cw-VEF" firstAttribute="top" secondItem="Ef7-Im-xDa" secondAttribute="bottom" constant="8" id="vhr-4f-KXO"/>
+                            <constraint firstAttribute="trailing" secondItem="gPk-pR-2A0" secondAttribute="trailing" id="jTq-HJ-Ggz"/>
+                            <constraint firstItem="ei7-ir-DHy" firstAttribute="leading" secondItem="3tw-d1-S3R" secondAttribute="leading" id="mcf-Ky-Y0Q"/>
+                            <constraint firstAttribute="bottom" secondItem="JPF-Cw-VEF" secondAttribute="bottom" constant="34" id="uno-AX-CAq"/>
                             <constraint firstItem="JPF-Cw-VEF" firstAttribute="trailing" secondItem="ei7-ir-DHy" secondAttribute="trailing" id="xSZ-ke-Ppa"/>
-                            <constraint firstItem="Ef7-Im-xDa" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" constant="110" id="xn4-SN-ltt"/>
+                            <constraint firstItem="Ef7-Im-xDa" firstAttribute="leading" secondItem="3tw-d1-S3R" secondAttribute="leading" constant="110" id="xn4-SN-ltt"/>
+                            <constraint firstItem="JPF-Cw-VEF" firstAttribute="top" secondItem="Ef7-Im-xDa" secondAttribute="bottom" constant="7" id="zhD-93-b0n"/>
+                            <constraint firstItem="JPF-Cw-VEF" firstAttribute="top" secondItem="gPk-pR-2A0" secondAttribute="bottom" constant="8" id="zkm-Ur-ltW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="vJH-X1-c3b"/>
                     </view>
                     <connections>
                         <outlet property="bottomConstraint" destination="uno-AX-CAq" id="em5-GL-gjM"/>
                         <outlet property="datePicker" destination="nkN-A8-Sid" id="ovI-iE-FGV"/>
+                        <outlet property="navBar" destination="ei7-ir-DHy" id="eLq-MM-DX7"/>
+                        <outlet property="scrollViewBottom" destination="JPF-Cw-VEF" id="Iwn-F8-spn"/>
                         <outlet property="setDateBtn" destination="Ef7-Im-xDa" id="VS0-lR-uyk"/>
                         <outlet property="stackBtmView" destination="ytN-18-AbC" id="GGp-h3-X79"/>
                         <outlet property="textView" destination="gPk-pR-2A0" id="Zfs-hp-ap2"/>
