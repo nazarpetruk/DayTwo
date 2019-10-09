@@ -9,22 +9,29 @@
 import UIKit
 
 class CreateJournalVC: UIViewController {
-
+    
+    @IBOutlet weak var setDateBtn: UIButton!
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var stackBtmView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setDateBtn.layer.cornerRadius = 7
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backBtnPressed(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func saveBtnPressed(_ sender: Any) {
+    }
+    
+    @IBAction func setDateBtnPressed(_ sender: Any) {
+    }
+    
+    @IBAction func calendarBtnPressed(_ sender: Any) {
+    }
+    
+    @IBAction func cameraBtnPressed(_ sender: Any) {
+    }
 }

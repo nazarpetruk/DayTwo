@@ -110,7 +110,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-3T-CjS">
                                             <rect key="frame" x="0.0" y="0.0" width="207" height="130"/>
-                                            <state key="normal" image="whiteCamera"/>
+                                            <state key="normal" image="camera"/>
                                             <connections>
                                                 <action selector="cameraBtnPressed:" destination="nQz-Fy-cPc" eventType="touchUpInside" id="8t3-aa-8M7"/>
                                             </connections>
@@ -166,13 +166,129 @@
                     <view key="view" contentMode="scaleToFill" id="3tw-d1-S3R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei7-ir-DHy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="26"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="New Log" id="9Fh-Xc-YeZ">
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="2Dr-Vi-wjo">
+                                            <connections>
+                                                <action selector="backBtnPressed:" destination="CIe-KW-sby" id="q2d-BR-ZUQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" image="square.and.pencil" catalog="system" id="MhU-pq-tff">
+                                            <connections>
+                                                <action selector="saveBtnPressed:" destination="CIe-KW-sby" id="jxy-bF-FxI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-8k-mDx">
+                                <rect key="frame" x="0.0" y="64" width="414" height="639"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="639" id="94e-tT-tI4"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wHq-Vs-Hjs">
+                                <rect key="frame" x="0.0" y="507" width="414" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="jWt-0e-SIz"/>
+                                </constraints>
+                            </datePicker>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="JPF-Cw-VEF">
+                                <rect key="frame" x="0.0" y="703" width="414" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ytN-18-AbC">
+                                        <rect key="frame" x="10" y="10" width="180" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTD-9K-4CN">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="85" id="b5T-t7-leS"/>
+                                                    <constraint firstAttribute="width" constant="85" id="sZG-Kb-RDM"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="calendar"/>
+                                                <connections>
+                                                    <action selector="calendarBtnPressed:" destination="CIe-KW-sby" eventType="touchUpInside" id="5up-Eq-D0o"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02K-zT-AnN">
+                                                <rect key="frame" x="95" y="0.0" width="85" height="85"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="85" id="cEh-hW-J2U"/>
+                                                    <constraint firstAttribute="width" constant="85" id="vUA-NN-dwG"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="cameraColor"/>
+                                                <connections>
+                                                    <action selector="cameraBtnPressed:" destination="CIe-KW-sby" eventType="touchUpInside" id="rri-Kq-gdU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ytN-18-AbC" firstAttribute="top" secondItem="YaE-7g-3bk" secondAttribute="top" constant="10" id="9rN-Zj-lKo"/>
+                                    <constraint firstItem="ytN-18-AbC" firstAttribute="leading" secondItem="YaE-7g-3bk" secondAttribute="leading" constant="10" id="MDA-Zb-Mzs"/>
+                                    <constraint firstItem="YaE-7g-3bk" firstAttribute="bottom" secondItem="ytN-18-AbC" secondAttribute="bottom" constant="10" id="Ut9-VZ-Ss9"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="0nn-Ue-FNJ"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="YaE-7g-3bk"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x68-un-C6z">
+                                <rect key="frame" x="100" y="635" width="214" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="20"/>
+                                <state key="normal" title="Set Date">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="setDateBtnPressed:" destination="CIe-KW-sby" eventType="touchUpInside" id="bWl-fp-wKA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x68-un-C6z" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" constant="100" id="42K-0C-jWZ"/>
+                            <constraint firstItem="uJO-8k-mDx" firstAttribute="trailing" secondItem="vJH-X1-c3b" secondAttribute="trailing" id="AZE-AD-S9w"/>
+                            <constraint firstItem="JPF-Cw-VEF" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" id="FJB-Cc-Fjm"/>
+                            <constraint firstItem="ei7-ir-DHy" firstAttribute="trailing" secondItem="vJH-X1-c3b" secondAttribute="trailing" id="Iub-ji-7Wx"/>
+                            <constraint firstItem="uJO-8k-mDx" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" id="Mbr-Rm-jnz"/>
+                            <constraint firstItem="x68-un-C6z" firstAttribute="top" secondItem="wHq-Vs-Hjs" secondAttribute="bottom" constant="8" id="Ob9-UC-K7Q"/>
+                            <constraint firstAttribute="bottom" secondItem="JPF-Cw-VEF" secondAttribute="bottom" id="Pb2-wt-bLF"/>
+                            <constraint firstItem="vJH-X1-c3b" firstAttribute="trailing" secondItem="x68-un-C6z" secondAttribute="trailing" constant="100" id="ZO3-Lc-MmM"/>
+                            <constraint firstItem="ei7-ir-DHy" firstAttribute="top" secondItem="vJH-X1-c3b" secondAttribute="top" id="aI3-IF-KhJ"/>
+                            <constraint firstItem="JPF-Cw-VEF" firstAttribute="top" secondItem="uJO-8k-mDx" secondAttribute="bottom" id="cBP-sg-Xhv"/>
+                            <constraint firstItem="JPF-Cw-VEF" firstAttribute="trailing" secondItem="vJH-X1-c3b" secondAttribute="trailing" id="cQK-hA-9ha"/>
+                            <constraint firstItem="wHq-Vs-Hjs" firstAttribute="trailing" secondItem="vJH-X1-c3b" secondAttribute="trailing" id="cvh-Gp-Ax0"/>
+                            <constraint firstItem="uJO-8k-mDx" firstAttribute="top" secondItem="ei7-ir-DHy" secondAttribute="bottom" id="duJ-Sy-np3"/>
+                            <constraint firstItem="x68-un-C6z" firstAttribute="top" secondItem="uJO-8k-mDx" secondAttribute="bottom" constant="-68" id="l8y-6Y-rbb"/>
+                            <constraint firstItem="ei7-ir-DHy" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" id="mcf-Ky-Y0Q"/>
+                            <constraint firstItem="wHq-Vs-Hjs" firstAttribute="leading" secondItem="vJH-X1-c3b" secondAttribute="leading" id="w4z-xo-aPC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vJH-X1-c3b"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="wHq-Vs-Hjs" id="I7J-It-DLF"/>
+                        <outlet property="setDateBtn" destination="x68-un-C6z" id="IFw-S3-FdW"/>
+                        <outlet property="stackBtmView" destination="ytN-18-AbC" id="GGp-h3-X79"/>
+                        <outlet property="textView" destination="uJO-8k-mDx" id="yi3-C2-L9z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6P-km-ehg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263" y="-891"/>
+            <point key="canvasLocation" x="2262.3188405797105" y="-891.29464285714278"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="ESY-pB-Roa">
@@ -190,6 +306,10 @@
     </scenes>
     <resources>
         <image name="add" width="256" height="256"/>
-        <image name="whiteCamera" width="256" height="256"/>
+        <image name="back" width="14" height="25"/>
+        <image name="calendar" width="512" height="512"/>
+        <image name="camera" width="512" height="512"/>
+        <image name="cameraColor" width="512" height="512"/>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
 </document>
