@@ -10,16 +10,19 @@ import UIKit
 
 class CreateJournalVC: UIViewController {
     
+    //MARK: IBOutlets
     @IBOutlet weak var setDateBtn: UIButton!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var stackBtmView: UIStackView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDateBtn.layer.cornerRadius = 7
     }
     
+    //MARK: IBActions
     @IBAction func backBtnPressed(_ sender: Any) {
     }
     
