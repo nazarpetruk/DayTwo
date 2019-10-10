@@ -31,6 +31,25 @@ class Picture : Object {
         }
     }
     
+    func fullImg() -> UIImage{
+        return imageByFileName(fileName: fullSizeImg)
+    }
+    
+    func smallImg() -> UIImage{
+        return imageByFileName(fileName: sImg)
+    }
+    
+    func imageByFileName(fileName: String) -> UIImage {
+         var path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        path.appendPathComponent(fileName)
+        if let imageData = try? Data(contentsOf: path) {
+            if let image = UIImage(data: imageData){
+                return image
+            }
+        }
+        return UIImage()
+    }
+    
     //Image saving path
     func imageToUrlString(image: UIImage) -> String {
         if let imgData = image.pngData(){

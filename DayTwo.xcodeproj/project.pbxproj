@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4411070B234F5FB0006B6001 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411070A234F5FB0006B6001 /* Model.swift */; };
+		4411070D234F7724006B6001 /* JournalTableVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411070C234F7724006B6001 /* JournalTableVCCell.swift */; };
 		44E78F8F234CE55F00C99D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78F8E234CE55F00C99D26 /* AppDelegate.swift */; };
 		44E78F91234CE55F00C99D26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78F90234CE55F00C99D26 /* SceneDelegate.swift */; };
 		44E78F96234CE55F00C99D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E78F94234CE55F00C99D26 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		08301C1E380A6D0569C008C2 /* Pods_DayTwo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayTwo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4411070A234F5FB0006B6001 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4411070C234F7724006B6001 /* JournalTableVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableVCCell.swift; sourceTree = "<group>"; };
 		44E78F8B234CE55F00C99D26 /* DayTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E78F8E234CE55F00C99D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E78F90234CE55F00C99D26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		44E78F8D234CE55F00C99D26 /* DayTwo */ = {
 			isa = PBXGroup;
 			children = (
+				4411070C234F7724006B6001 /* JournalTableVCCell.swift */,
 				44E78FA6234CED3900C99D26 /* CreateJournalVC.swift */,
 				44E78FA2234CEC9600C99D26 /* JournalDetailVC.swift */,
 				44E78FA4234CECF400C99D26 /* JournalTableVC.swift */,
@@ -226,6 +229,7 @@
 				44E78FA3234CEC9600C99D26 /* JournalDetailVC.swift in Sources */,
 				44E78FA7234CED3900C99D26 /* CreateJournalVC.swift in Sources */,
 				44E78FA5234CECF400C99D26 /* JournalTableVC.swift in Sources */,
+				4411070D234F7724006B6001 /* JournalTableVCCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

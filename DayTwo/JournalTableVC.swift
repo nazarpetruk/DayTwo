@@ -15,19 +15,19 @@ class JournalTableVC: UITableViewController {
     @IBOutlet weak var whiteCameraBtn: UIButton!
     @IBOutlet weak var whitePlusBtn: UIButton!
     
+    //MARK: Vars & Const
+    var entries : Results<Entry>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         whitePlusBtn.imageView?.contentMode = .scaleAspectFit
         whiteCameraBtn.imageView?.contentMode = .scaleAspectFit
-        
-        if let realm = try? Realm() {
-            let entries = realm.objects(Entry.self)
-            print(entries[0].userDayDesc)
-            print(entries[0].date)
-            print(entries[0].picture.count)
-        }
-
+        getDataFromRealm()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getDataFromRealm()
     }
     
     //MARK: IBActions
@@ -50,28 +50,41 @@ class JournalTableVC: UITableViewController {
             }
         }
     }
+    //MARK: Functions
+    
+    func getDataFromRealm() {
+        if let realm = try? Realm() {
+           entries = realm.objects(Entry.self).sorted(byKeyPath: "date", ascending: false)
+            tableView.reloadData()
+        }
+    }
     
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 0
-    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 0
+        guard let entries = self.entries else { return 1 }
+        return entries.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as? JournalTableVCCell {
+            if let entry = entries?[indexPath.row] {
+                cell.userTextLbl.text = entry.userDayDesc
+                if let image = entry.picture.first?.smallImg(){
+                    cell.constraintToResizeImg.constant = 140
+                    cell.cellImgView.image = image
+                }else{
+                    cell.constraintToResizeImg.constant = 0
+                }
+            }
+            return cell
+        }
+        return UITableViewCell()
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
 
     /*
     // Override to support conditional editing of the table view.
