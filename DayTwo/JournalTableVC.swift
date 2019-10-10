@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class JournalTableVC: UITableViewController {
     
@@ -19,6 +20,14 @@ class JournalTableVC: UITableViewController {
         
         whitePlusBtn.imageView?.contentMode = .scaleAspectFit
         whiteCameraBtn.imageView?.contentMode = .scaleAspectFit
+        
+        if let realm = try? Realm() {
+            let entries = realm.objects(Entry.self)
+            print(entries[0].userDayDesc)
+            print(entries[0].date)
+            print(entries[0].picture.count)
+        }
+
     }
     
     //MARK: IBActions
@@ -32,7 +41,14 @@ class JournalTableVC: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "createNew" {
+                   if let text = sender as? String {
+                       if text == "camera" {
+                           let createVC = segue.destination as? CreateJournalVC
+                           createVC?.beginWithCam = true
+                }
+            }
+        }
     }
     
     // MARK: - Table view data source

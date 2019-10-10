@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
@@ -23,6 +24,7 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
     var date = Date()
     var imagePicker = UIImagePickerController()
     var imagesArray : [UIImage] = []
+    var beginWithCam = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,13 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
     
     override func viewWillAppear(_ animated: Bool) {
         updateDate()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if beginWithCam {
+            beginWithCam = false
+            cameraBtnPressed("")
+        }
     }
     
     //MARK:ScrolltoKeyboardClipFunc
@@ -61,9 +70,24 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
     
     //MARK: IBActions
     @IBAction func backBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveBtnPressed(_ sender: Any) {
+        if let realm =  try? Realm(){
+            let entry = Entry()
+            entry.userDayDesc = textView.text
+            entry.date = date
+            for image in imagesArray {
+                let img = Picture(image: image)
+                entry.picture.append(img)
+                img.entry = entry
+            }
+            try? realm.write {
+                realm.add(entry)
+            }
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func setDateBtnPressed(_ sender: Any) {

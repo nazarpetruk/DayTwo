@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4411070B234F5FB0006B6001 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4411070A234F5FB0006B6001 /* Model.swift */; };
 		44E78F8F234CE55F00C99D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78F8E234CE55F00C99D26 /* AppDelegate.swift */; };
 		44E78F91234CE55F00C99D26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78F90234CE55F00C99D26 /* SceneDelegate.swift */; };
 		44E78F96234CE55F00C99D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E78F94234CE55F00C99D26 /* Main.storyboard */; };
@@ -16,9 +17,12 @@
 		44E78FA5234CECF400C99D26 /* JournalTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78FA4234CECF400C99D26 /* JournalTableVC.swift */; };
 		44E78FA7234CED3900C99D26 /* CreateJournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78FA6234CED3900C99D26 /* CreateJournalVC.swift */; };
 		44E78FA9234CEDA000C99D26 /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E78FA8234CEDA000C99D26 /* PhotoCollectionVC.swift */; };
+		9818C2AE0BB7373399597C77 /* Pods_DayTwo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08301C1E380A6D0569C008C2 /* Pods_DayTwo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08301C1E380A6D0569C008C2 /* Pods_DayTwo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayTwo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4411070A234F5FB0006B6001 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		44E78F8B234CE55F00C99D26 /* DayTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E78F8E234CE55F00C99D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E78F90234CE55F00C99D26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		44E78FA4234CECF400C99D26 /* JournalTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableVC.swift; sourceTree = "<group>"; };
 		44E78FA6234CED3900C99D26 /* CreateJournalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalVC.swift; sourceTree = "<group>"; };
 		44E78FA8234CEDA000C99D26 /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
+		62A18439AEFF41A74C4A814E /* Pods-DayTwo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTwo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DayTwo/Pods-DayTwo.debug.xcconfig"; sourceTree = "<group>"; };
+		67F6E30E95267EE08F9C7BA2 /* Pods-DayTwo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayTwo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayTwo/Pods-DayTwo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9818C2AE0BB7373399597C77 /* Pods_DayTwo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053573BEDD9067A6BB23B4F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08301C1E380A6D0569C008C2 /* Pods_DayTwo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		44E78F82234CE55F00C99D26 = {
 			isa = PBXGroup;
 			children = (
 				44E78F8D234CE55F00C99D26 /* DayTwo */,
 				44E78F8C234CE55F00C99D26 /* Products */,
+				E22A9E97BA757949A036BA74 /* Pods */,
+				053573BEDD9067A6BB23B4F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +83,7 @@
 				44E78FA2234CEC9600C99D26 /* JournalDetailVC.swift */,
 				44E78FA4234CECF400C99D26 /* JournalTableVC.swift */,
 				44E78FA8234CEDA000C99D26 /* PhotoCollectionVC.swift */,
+				4411070A234F5FB0006B6001 /* Model.swift */,
 				44E78F8E234CE55F00C99D26 /* AppDelegate.swift */,
 				44E78F90234CE55F00C99D26 /* SceneDelegate.swift */,
 				44E78F94234CE55F00C99D26 /* Main.storyboard */,
@@ -76,6 +94,15 @@
 			path = DayTwo;
 			sourceTree = "<group>";
 		};
+		E22A9E97BA757949A036BA74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62A18439AEFF41A74C4A814E /* Pods-DayTwo.debug.xcconfig */,
+				67F6E30E95267EE08F9C7BA2 /* Pods-DayTwo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44E78F9F234CE56000C99D26 /* Build configuration list for PBXNativeTarget "DayTwo" */;
 			buildPhases = (
+				26AAD2C40EF36F4E854E5815 /* [CP] Check Pods Manifest.lock */,
 				44E78F87234CE55F00C99D26 /* Sources */,
 				44E78F88234CE55F00C99D26 /* Frameworks */,
 				44E78F89234CE55F00C99D26 /* Resources */,
+				3D40AC0AA5A670AFDA7A11DF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,11 +171,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26AAD2C40EF36F4E854E5815 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DayTwo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D40AC0AA5A670AFDA7A11DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DayTwo/Pods-DayTwo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toucan/Toucan.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toucan.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DayTwo/Pods-DayTwo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		44E78F87234CE55F00C99D26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4411070B234F5FB0006B6001 /* Model.swift in Sources */,
 				44E78F8F234CE55F00C99D26 /* AppDelegate.swift in Sources */,
 				44E78FA9234CEDA000C99D26 /* PhotoCollectionVC.swift in Sources */,
 				44E78F91234CE55F00C99D26 /* SceneDelegate.swift in Sources */,
@@ -294,6 +367,7 @@
 		};
 		44E78FA0234CE56000C99D26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62A18439AEFF41A74C4A814E /* Pods-DayTwo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +386,7 @@
 		};
 		44E78FA1234CE56000C99D26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67F6E30E95267EE08F9C7BA2 /* Pods-DayTwo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
