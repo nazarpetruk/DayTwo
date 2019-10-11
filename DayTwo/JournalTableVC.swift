@@ -14,16 +14,23 @@ class JournalTableVC: UITableViewController {
     //MARK: IBOutlets
     @IBOutlet weak var whiteCameraBtn: UIButton!
     @IBOutlet weak var whitePlusBtn: UIButton!
+    @IBOutlet weak var headerView: UIView!
     
     //MARK: Vars & Const
     var entries : Results<Entry>?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         whitePlusBtn.imageView?.contentMode = .scaleAspectFit
         whiteCameraBtn.imageView?.contentMode = .scaleAspectFit
-        getDataFromRealm()
+        
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        navigationController?.navigationBar.isTranslucent = false
+         navigationController?.navigationBar.barTintColor = UIColor(red: 0.000, green: 0.836, blue: 0.828, alpha: 1.00)
+        navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        headerView.backgroundColor = UIColor(red: 0.000, green: 0.836, blue: 0.828, alpha: 1.00)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,11 +78,14 @@ class JournalTableVC: UITableViewController {
             if let entry = entries?[indexPath.row] {
                 cell.userTextLbl.text = entry.userDayDesc
                 if let image = entry.picture.first?.smallImg(){
-                    cell.constraintToResizeImg.constant = 140
+                    cell.constraintToResizeImg.constant = 130
                     cell.cellImgView.image = image
                 }else{
                     cell.constraintToResizeImg.constant = 0
                 }
+                cell.monthLbl.text = entry.dataFormattingMonth()
+                cell.dayLbl.text = entry.dataFormattingDay()
+                cell.yearLbl.text = entry.dataFormattingYear()
             }
             return cell
         }
@@ -131,4 +141,13 @@ class JournalTableVC: UITableViewController {
     }
     */
 
+//    func gradColor(bound : CGRect) -> CAGradientLayer{
+//        let startColor = UIColor(cgColor: CGColor(srgbRed: 2, green: 170, blue: 176, alpha: 1))
+//        let endColor = UIColor(cgColor: CGColor(srgbRed: 0, green: 205, blue: 172, alpha: 1))
+//        gradient.colors = [startColor.cgColor, endColor.cgColor]
+//        gradient.frame = bound
+//
+//        return gradient
+//    }
+    
 }

@@ -15,6 +15,23 @@ class Entry : Object {
     @objc dynamic var date = Date()
     let picture = List<Picture>()
     
+    
+    func dataFormattingMonth() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM"
+        return formatter.string(from: date)
+    }
+    func dataFormattingDay() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "d"
+        return formatter.string(from: date)
+    }
+    func dataFormattingYear() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return formatter.string(from: date)
+    }
+    
 }
 
 class Picture : Object {

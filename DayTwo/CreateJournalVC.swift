@@ -131,4 +131,13 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
             }
         }
     }
+    func gradColor(bound : CGRect) -> CAGradientLayer{
+        let gradient = CAGradientLayer()
+        let startColor = UIColor(cgColor: CGColor(srgbRed: 2, green: 170, blue: 176, alpha: 1))
+        let endColor = UIColor(cgColor: CGColor(srgbRed: 0, green: 205, blue: 172, alpha: 1))
+        gradient.colors = [startColor.cgColor, endColor.cgColor]
+        gradient.frame = bound
+        
+        return gradient
+    }
 }
