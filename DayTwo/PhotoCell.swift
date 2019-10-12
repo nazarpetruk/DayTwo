@@ -13,4 +13,8 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageCellView: UIImageView!
     @IBOutlet weak var monthYearlbl: UILabel!
     @IBOutlet weak var dayLbl: UILabel!
+    
+    override func awakeFromNib() {
+        super .awakeFromNib()
+    }
 }

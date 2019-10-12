@@ -16,4 +16,5 @@ class JournalTableVCCell: UITableViewCell {
     @IBOutlet weak var monthLbl: UILabel!
     @IBOutlet weak var userTextLbl: UILabel!
     @IBOutlet weak var cellImgView: UIImageView!
+    @IBOutlet weak var stackViewCell: UIStackView!
 }

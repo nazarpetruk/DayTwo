@@ -24,7 +24,6 @@ class JournalTableVC: UITableViewController {
         
         whitePlusBtn.imageView?.contentMode = .scaleAspectFit
         whiteCameraBtn.imageView?.contentMode = .scaleAspectFit
-        
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         navigationController?.navigationBar.isTranslucent = false
          navigationController?.navigationBar.barTintColor = UIColor(red: 0.000, green: 0.836, blue: 0.828, alpha: 1.00)
@@ -55,6 +54,12 @@ class JournalTableVC: UITableViewController {
                            createVC?.beginWithCam = true
                 }
             }
+        }else if segue.identifier == "toDetail" {
+            if let entry = sender as? Entry {
+                if let detailVC = segue.destination as? JournalDetailVC {
+                    detailVC.entry = entry
+                }
+            }
         }
     }
     //MARK: Functions
@@ -64,6 +69,9 @@ class JournalTableVC: UITableViewController {
            entries = realm.objects(Entry.self).sorted(byKeyPath: "date", ascending: false)
             tableView.reloadData()
         }
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: - Table view data source
@@ -86,6 +94,15 @@ class JournalTableVC: UITableViewController {
                 cell.monthLbl.text = entry.dataFormattingMonth()
                 cell.dayLbl.text = entry.dataFormattingDay()
                 cell.yearLbl.text = entry.dataFormattingYear()
+                cell.cellImgView.layer.cornerRadius = 60
+                cell.cellImgView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+                cell.cellImgView.layer.borderWidth = 1
+                cell.cellImgView.layer.masksToBounds = true
+                
+                cell.layer.cornerRadius = 12
+                cell.layer.borderWidth = 2
+                cell.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+                
             }
             return cell
         }
@@ -95,59 +112,10 @@ class JournalTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-//    func gradColor(bound : CGRect) -> CAGradientLayer{
-//        let startColor = UIColor(cgColor: CGColor(srgbRed: 2, green: 170, blue: 176, alpha: 1))
-//        let endColor = UIColor(cgColor: CGColor(srgbRed: 0, green: 205, blue: 172, alpha: 1))
-//        gradient.colors = [startColor.cgColor, endColor.cgColor]
-//        gradient.frame = bound
-//
-//        return gradient
-//    }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let entry = entries?[indexPath.row]{
+             performSegue(withIdentifier: "toDetail", sender: entry)
+        }
+    }
 }

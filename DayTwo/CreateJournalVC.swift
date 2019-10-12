@@ -35,6 +35,10 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
         //Notifications Observers
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        scrollViewBottom.layer.cornerRadius = 7
+        scrollViewBottom.layer.borderWidth = 1
+        scrollViewBottom.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        scrollViewBottom.layer.masksToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -125,6 +129,10 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
             imageView.image = userImg
             imageView.contentMode = .scaleAspectFill
             imageView.clipsToBounds = true
+            imageView.layer.cornerRadius = 42.5
+            imageView.layer.masksToBounds = true
+//            imageView.layer.borderWidth = 1
+//            imageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
             stackBtmView.addArrangedSubview(imageView)
             imagePicker.dismiss(animated: true) {
                 
