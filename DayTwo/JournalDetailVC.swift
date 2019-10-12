@@ -24,11 +24,12 @@ class JournalDetailVC: UIViewController {
         
         userDayDescLbl.layer.cornerRadius = 10
         userDayDescLbl.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
-        userDayDescLbl.layer.borderWidth = 3
+        userDayDescLbl.layer.borderWidth = 2
         userDayDescLbl.layer.masksToBounds = true
         
         if let entry = self.entry {
-            title = entry.dataFormattingDay() + " " + entry.dataFormattingMonth() + " " + entry.dataFormattingYear()
+            title = entry.dataFormattingDay() + ", " + entry.dataFormattingMonth() + ". " + entry.dataFormattingYear()
+    
             userDayDescLbl.text = entry.userDayDesc
             for img in entry.picture{
                 let imageView = UIImageView()
@@ -41,7 +42,7 @@ class JournalDetailVC: UIViewController {
                 imageView.heightAnchor.constraint(equalTo: detailStackView.widthAnchor, multiplier: ratio).isActive = true
                 imageView.layer.cornerRadius = 10
                 imageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
-                imageView.layer.borderWidth = 4
+                imageView.layer.borderWidth = 2
                 imageView.layer.masksToBounds = true
             }
         }else{

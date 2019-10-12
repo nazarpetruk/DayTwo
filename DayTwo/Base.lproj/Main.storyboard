@@ -17,18 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIH-za-Yj7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="822"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Soa-Os-yoT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="240.5"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Soa-Os-yoT">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="144.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMd-ae-0hO">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="240.5"/>
-                                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="144.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <string key="text">Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.</string>
-                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -36,7 +36,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Soa-Os-yoT" secondAttribute="trailing" id="51s-yD-4IK"/>
                                     <constraint firstItem="Soa-Os-yoT" firstAttribute="width" secondItem="BIH-za-Yj7" secondAttribute="width" id="84K-5z-9S3"/>
@@ -50,7 +50,7 @@
                         <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BIH-za-Yj7" firstAttribute="trailing" secondItem="ZcA-wP-wAV" secondAttribute="trailing" id="G53-nJ-R6n"/>
-                            <constraint firstItem="BIH-za-Yj7" firstAttribute="top" secondItem="ZcA-wP-wAV" secondAttribute="top" id="dFI-Wr-Y7z"/>
+                            <constraint firstItem="BIH-za-Yj7" firstAttribute="top" secondItem="ZcA-wP-wAV" secondAttribute="top" constant="20" id="dFI-Wr-Y7z"/>
                             <constraint firstAttribute="bottom" secondItem="BIH-za-Yj7" secondAttribute="bottom" id="oSC-vi-j8R"/>
                             <constraint firstItem="BIH-za-Yj7" firstAttribute="leading" secondItem="ZcA-wP-wAV" secondAttribute="leading" id="rmH-Uf-Ih4"/>
                         </constraints>
@@ -96,7 +96,7 @@
             <objects>
                 <tabBarController interfaceStyle="light" id="FHf-sX-LMw" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Day Two " id="40G-r8-Rci"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vC8-4M-xfL">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="vC8-4M-xfL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -175,11 +175,11 @@
                             <outlet property="delegate" destination="HqN-pw-W4P" id="t95-5M-s7F"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Olv-zK-GDU"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="icons8-picture-30" selectedImage="icons8-picture-30" id="Olv-zK-GDU"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3v-KS-PsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605.7971014492755" y="-225"/>
+            <point key="canvasLocation" x="1633" y="-227"/>
         </scene>
         <!--Item-->
         <scene sceneID="isA-ev-yXW">
@@ -313,7 +313,7 @@
                             <outlet property="delegate" destination="nQz-Fy-cPc" id="jv1-2M-8mW"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="zbU-SQ-LMQ"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="icons8-home-30" selectedImage="icons8-home-30" id="zbU-SQ-LMQ"/>
                     <connections>
                         <outlet property="headerView" destination="t5t-bj-DyT" id="FRH-eS-bI3"/>
                         <outlet property="whiteCameraBtn" destination="jaN-3T-CjS" id="qak-S6-RBD"/>
@@ -324,7 +324,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0c-k2-Zpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605.7971014492755" y="-887.27678571428567"/>
+            <point key="canvasLocation" x="1664" y="-885"/>
         </scene>
         <!--Create JournalVC-->
         <scene sceneID="1lf-E2-Ub5">
@@ -378,7 +378,7 @@
                                     <action selector="setDateBtnPressed:" destination="CIe-KW-sby" eventType="touchUpInside" id="aGz-w5-t62"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-Cw-VEF">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-Cw-VEF">
                                 <rect key="frame" x="0.0" y="697" width="414" height="111"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ytN-18-AbC">
@@ -479,6 +479,8 @@
         <image name="calendar" width="512" height="512"/>
         <image name="camera" width="512" height="512"/>
         <image name="cameraColor" width="512" height="512"/>
+        <image name="icons8-home-30" width="30" height="30"/>
+        <image name="icons8-picture-30" width="30" height="30"/>
         <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
