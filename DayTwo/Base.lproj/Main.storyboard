@@ -46,11 +46,11 @@
             </objects>
             <point key="canvasLocation" x="254" y="-560"/>
         </scene>
-        <!--Your Notes-->
+        <!--Day Two -->
         <scene sceneID="pUc-h3-7nc">
             <objects>
                 <tabBarController id="FHf-sX-LMw" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Your Notes" id="40G-r8-Rci"/>
+                    <navigationItem key="navigationItem" title="Day Two " id="40G-r8-Rci"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vC8-4M-xfL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -58,7 +58,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="nQz-Fy-cPc" kind="relationship" relationship="viewControllers" id="acu-sU-gxd"/>
-                        <segue destination="w7C-6R-N5q" kind="relationship" relationship="viewControllers" id="1YU-ma-e7R"/>
+                        <segue destination="HqN-pw-W4P" kind="relationship" relationship="viewControllers" id="lZY-jT-U20"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gww-pu-dB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -66,39 +66,73 @@
             <point key="canvasLocation" x="961" y="-560"/>
         </scene>
         <!--Item-->
-        <scene sceneID="hID-6y-EWy">
+        <scene sceneID="zXx-Ky-0Ts">
             <objects>
-                <collectionViewController id="w7C-6R-N5q" customClass="PhotoCollectionVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xhC-Ty-A6Q">
+                <collectionViewController id="HqN-pw-W4P" customClass="PhotoCollectionVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gd7-aw-uFu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="z7w-mE-UYP">
-                            <size key="itemSize" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dzT-pj-mrs">
+                            <size key="itemSize" width="330" height="258"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hao-3I-UKZ">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XTX-jD-d1m">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="photoCell" id="dpl-1M-fOG" customClass="PhotoCell" customModule="DayTwo" customModuleProvider="target">
+                                <rect key="frame" x="42" y="0.0" width="330" height="258"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qLH-Mg-8Rg">
+                                    <rect key="frame" x="0.0" y="0.0" width="330" height="258"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ccp-f0-bgg">
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="258"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October, 2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJO-80-hxG">
+                                            <rect key="frame" x="0.0" y="225.5" width="325" height="24.5"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGs-cg-35N">
+                                            <rect key="frame" x="0.0" y="183.5" width="325" height="42"/>
+                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="35"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="GJO-80-hxG" secondAttribute="trailing" constant="5" id="0Wl-o5-flh"/>
+                                        <constraint firstItem="GJO-80-hxG" firstAttribute="leading" secondItem="qLH-Mg-8Rg" secondAttribute="leading" id="RG6-Lv-Hmm"/>
+                                        <constraint firstAttribute="bottom" secondItem="GJO-80-hxG" secondAttribute="bottom" constant="8" id="aDj-8n-Jst"/>
+                                        <constraint firstAttribute="trailing" secondItem="zGs-cg-35N" secondAttribute="trailing" constant="5" id="dN6-WN-3w1"/>
+                                        <constraint firstItem="GJO-80-hxG" firstAttribute="top" secondItem="zGs-cg-35N" secondAttribute="bottom" id="kEa-zM-HXS"/>
+                                        <constraint firstItem="zGs-cg-35N" firstAttribute="leading" secondItem="qLH-Mg-8Rg" secondAttribute="leading" id="oHD-Ht-gLD"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                <size key="customSize" width="330" height="258"/>
+                                <connections>
+                                    <outlet property="dayLbl" destination="zGs-cg-35N" id="O2A-qF-CoM"/>
+                                    <outlet property="imageCellView" destination="Ccp-f0-bgg" id="WYk-it-Fdp"/>
+                                    <outlet property="monthYearlbl" destination="GJO-80-hxG" id="Am8-WH-ZiL"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="w7C-6R-N5q" id="6MA-Y5-fao"/>
-                            <outlet property="delegate" destination="w7C-6R-N5q" id="Vpy-RY-wMR"/>
+                            <outlet property="dataSource" destination="HqN-pw-W4P" id="YTK-CN-dmq"/>
+                            <outlet property="delegate" destination="HqN-pw-W4P" id="t95-5M-s7F"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Dd9-Lm-rCT"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="Olv-zK-GDU"/>
                 </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DC1-D3-B5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3v-KS-PsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="-248"/>
+            <point key="canvasLocation" x="1605.7971014492755" y="-225"/>
         </scene>
         <!--Item-->
         <scene sceneID="isA-ev-yXW">

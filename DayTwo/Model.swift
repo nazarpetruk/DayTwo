@@ -31,6 +31,11 @@ class Entry : Object {
         formatter.dateFormat = "yyyy"
         return formatter.string(from: date)
     }
+    func dataMonthAndYearString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM, yyyy"
+        return formatter.string(from: date)
+    }
     
 }
 
