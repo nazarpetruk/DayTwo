@@ -131,21 +131,11 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
             imageView.clipsToBounds = true
             imageView.layer.cornerRadius = 42.5
             imageView.layer.masksToBounds = true
-//            imageView.layer.borderWidth = 1
-//            imageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+            
             stackBtmView.addArrangedSubview(imageView)
             imagePicker.dismiss(animated: true) {
                 
             }
         }
-    }
-    func gradColor(bound : CGRect) -> CAGradientLayer{
-        let gradient = CAGradientLayer()
-        let startColor = UIColor(cgColor: CGColor(srgbRed: 2, green: 170, blue: 176, alpha: 1))
-        let endColor = UIColor(cgColor: CGColor(srgbRed: 0, green: 205, blue: 172, alpha: 1))
-        gradient.colors = [startColor.cgColor, endColor.cgColor]
-        gradient.frame = bound
-        
-        return gradient
     }
 }

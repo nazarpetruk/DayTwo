@@ -11,7 +11,7 @@
         <!--Journal DetailVC-->
         <scene sceneID="RWd-Cb-rJ2">
             <objects>
-                <viewController id="fKf-ps-5zv" customClass="JournalDetailVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="fKf-ps-5zv" customClass="JournalDetailVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Go-2p-29A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oxk-e9-tQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="253.62318840579712" y="87.723214285714278"/>
+            <point key="canvasLocation" x="961" y="170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4V-D5-Bo2">
@@ -122,12 +122,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gww-pu-dB1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="-560"/>
+            <point key="canvasLocation" x="1012" y="-560"/>
         </scene>
-        <!--Item-->
+        <!--Pictures-->
         <scene sceneID="zXx-Ky-0Ts">
             <objects>
-                <collectionViewController id="HqN-pw-W4P" customClass="PhotoCollectionVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController interfaceStyle="light" id="HqN-pw-W4P" customClass="PhotoCollectionVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gd7-aw-uFu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,16 +187,16 @@
                             <outlet property="delegate" destination="HqN-pw-W4P" id="t95-5M-s7F"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" image="icons8-picture-30" selectedImage="icons8-picture-30" id="Olv-zK-GDU"/>
+                    <tabBarItem key="tabBarItem" title="Pictures" image="icons8-picture-30" selectedImage="icons8-picture-30" id="Olv-zK-GDU"/>
                     <connections>
                         <segue destination="fKf-ps-5zv" kind="showDetail" identifier="photoToDetailVC" id="QSS-Z0-F7F"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3v-KS-PsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="-227"/>
+            <point key="canvasLocation" x="2425" y="169"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="isA-ev-yXW">
             <objects>
                 <tableViewController interfaceStyle="light" id="nQz-Fy-cPc" customClass="JournalTableVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
@@ -254,60 +254,73 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0E7-bM-yHp">
-                                            <rect key="frame" x="131" y="11" width="207" height="118"/>
+                                            <rect key="frame" x="131" y="11" width="210" height="118"/>
                                             <string key="text">Labelkosjdjbf fifrifjorif fjhfirfr frforjfirfrf rnforjforfrnfirf fnrjforjforjfof frnifjrojf fnfrjofjrfbr fnroforjf fnijforjfiff ifrofjorjf</string>
                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="19"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5tm-pR-nUs">
-                                            <rect key="frame" x="346" y="11" width="60" height="120"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZM-F0-QMH">
+                                            <rect key="frame" x="349" y="10" width="60" height="120"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeX-mz-Z9E">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="EuC-ja-fot"/>
-                                                        <constraint firstAttribute="width" constant="60" id="l8y-M4-zdY"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvw-ms-4sT">
-                                                    <rect key="frame" x="0.0" y="40" width="60" height="40"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="nh6-1e-J7V"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="40"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJi-kP-Zfa">
-                                                    <rect key="frame" x="0.0" y="80" width="60" height="40"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="K4W-9S-jEa"/>
-                                                        <constraint firstAttribute="width" constant="60" id="cu8-KF-mPl"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5tm-pR-nUs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="120"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeX-mz-Z9E">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="EuC-ja-fot"/>
+                                                                <constraint firstAttribute="width" constant="60" id="l8y-M4-zdY"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvw-ms-4sT">
+                                                            <rect key="frame" x="0.0" y="40" width="60" height="40"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="60" id="nh6-1e-J7V"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="40"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJi-kP-Zfa">
+                                                            <rect key="frame" x="0.0" y="80" width="60" height="40"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="K4W-9S-jEa"/>
+                                                                <constraint firstAttribute="width" constant="60" id="cu8-KF-mPl"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </stackView>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5tm-pR-nUs" secondAttribute="trailing" id="0i8-Go-a23"/>
+                                                <constraint firstAttribute="bottom" secondItem="5tm-pR-nUs" secondAttribute="bottom" id="9bh-vD-hOg"/>
+                                                <constraint firstItem="5tm-pR-nUs" firstAttribute="top" secondItem="QZM-F0-QMH" secondAttribute="top" id="JnQ-1y-Tr8"/>
+                                                <constraint firstItem="5tm-pR-nUs" firstAttribute="leading" secondItem="QZM-F0-QMH" secondAttribute="leading" id="N8B-Ju-6Q5"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5tm-pR-nUs" firstAttribute="height" secondItem="LoB-vq-dCq" secondAttribute="height" id="63U-kR-cDi"/>
+                                        <constraint firstAttribute="trailing" secondItem="QZM-F0-QMH" secondAttribute="trailing" constant="5" id="90D-lj-J3B"/>
                                         <constraint firstItem="LoB-vq-dCq" firstAttribute="top" secondItem="edD-eo-Mrj" secondAttribute="top" constant="10" id="FXo-nV-87G"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="0E7-bM-yHp" secondAttribute="bottom" id="HCh-0B-MnI"/>
+                                        <constraint firstAttribute="bottom" secondItem="QZM-F0-QMH" secondAttribute="bottom" constant="10" id="KLE-qF-wxG"/>
                                         <constraint firstItem="LoB-vq-dCq" firstAttribute="leading" secondItem="edD-eo-Mrj" secondAttribute="leading" constant="3" id="KMY-Ia-00G"/>
-                                        <constraint firstItem="5tm-pR-nUs" firstAttribute="top" secondItem="0E7-bM-yHp" secondAttribute="top" id="NcX-fU-hpT"/>
-                                        <constraint firstItem="5tm-pR-nUs" firstAttribute="leading" secondItem="0E7-bM-yHp" secondAttribute="trailing" constant="8" id="a8f-qm-ObE"/>
-                                        <constraint firstAttribute="trailing" secondItem="5tm-pR-nUs" secondAttribute="trailing" constant="8" id="aWq-5V-T33"/>
                                         <constraint firstItem="0E7-bM-yHp" firstAttribute="top" secondItem="edD-eo-Mrj" secondAttribute="topMargin" id="ddr-yJ-5Wv"/>
+                                        <constraint firstItem="QZM-F0-QMH" firstAttribute="top" secondItem="edD-eo-Mrj" secondAttribute="top" constant="10" id="n0z-E2-4hT"/>
+                                        <constraint firstItem="QZM-F0-QMH" firstAttribute="height" secondItem="LoB-vq-dCq" secondAttribute="height" id="nLp-0R-656"/>
+                                        <constraint firstItem="QZM-F0-QMH" firstAttribute="leading" secondItem="0E7-bM-yHp" secondAttribute="trailing" constant="8" id="vPh-Nm-AFE"/>
                                         <constraint firstItem="0E7-bM-yHp" firstAttribute="leading" secondItem="LoB-vq-dCq" secondAttribute="trailing" constant="8" id="ylR-pR-Sc5"/>
                                         <constraint firstAttribute="bottom" secondItem="LoB-vq-dCq" secondAttribute="bottom" constant="10" id="zjg-uF-apL"/>
                                     </constraints>
@@ -319,6 +332,7 @@
                                     <outlet property="monthLbl" destination="DeX-mz-Z9E" id="kbl-bo-5Fa"/>
                                     <outlet property="stackViewCell" destination="5tm-pR-nUs" id="HHw-Y8-GDw"/>
                                     <outlet property="userTextLbl" destination="0E7-bM-yHp" id="84l-fb-n1a"/>
+                                    <outlet property="viewForStackConfig" destination="QZM-F0-QMH" id="sDw-4w-9Mf"/>
                                     <outlet property="yearLbl" destination="wJi-kP-Zfa" id="gIU-Y4-Eku"/>
                                 </connections>
                             </tableViewCell>
@@ -328,7 +342,7 @@
                             <outlet property="delegate" destination="nQz-Fy-cPc" id="jv1-2M-8mW"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" image="icons8-home-30" selectedImage="icons8-home-30" id="zbU-SQ-LMQ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-home-30" selectedImage="icons8-home-30" id="zbU-SQ-LMQ"/>
                     <connections>
                         <outlet property="headerView" destination="t5t-bj-DyT" id="FRH-eS-bI3"/>
                         <outlet property="whiteCameraBtn" destination="jaN-3T-CjS" id="qak-S6-RBD"/>
@@ -339,12 +353,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0c-k2-Zpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664" y="-885"/>
+            <point key="canvasLocation" x="1673.913043478261" y="-560.49107142857144"/>
         </scene>
         <!--Create JournalVC-->
         <scene sceneID="1lf-E2-Ub5">
             <objects>
-                <viewController id="CIe-KW-sby" customClass="CreateJournalVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="CIe-KW-sby" customClass="CreateJournalVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tw-d1-S3R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6P-km-ehg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262.3188405797105" y="-891.29464285714278"/>
+            <point key="canvasLocation" x="2425" y="-560"/>
         </scene>
         <!--SplitVC-->
         <scene sceneID="ESY-pB-Roa">

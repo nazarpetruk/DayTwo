@@ -16,6 +16,7 @@ class JournalTableVC: UITableViewController {
     @IBOutlet weak var whitePlusBtn: UIButton!
     @IBOutlet weak var headerView: UIView!
     
+    
     //MARK: Vars & Const
     var entries : Results<Entry>?
 
@@ -74,6 +75,16 @@ class JournalTableVC: UITableViewController {
         return .lightContent
     }
     
+//    func gradColor(bound : CGRect) -> CAGradientLayer{
+//        let gradient = CAGradientLayer()
+//        let startColor = UIColor(cgColor: CGColor(srgbRed: 2, green: 170, blue: 176, alpha: 1))
+//        let endColor = UIColor(cgColor: CGColor(srgbRed: 0, green: 205, blue: 172, alpha: 1))
+//        gradient.colors = [startColor.cgColor, endColor.cgColor]
+//        gradient.frame = bound
+//
+//        return gradient
+//    }
+    
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,20 +102,14 @@ class JournalTableVC: UITableViewController {
                 }else{
                     cell.constraintToResizeImg.constant = 0
                 }
+                
                 cell.monthLbl.text = entry.dataFormattingMonth()
                 cell.dayLbl.text = entry.dataFormattingDay()
                 cell.yearLbl.text = entry.dataFormattingYear()
-                cell.cellImgView.layer.cornerRadius = 60
-                cell.cellImgView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
-                cell.cellImgView.layer.borderWidth = 1
-                cell.cellImgView.layer.masksToBounds = true
                 
-                cell.layer.cornerRadius = 12
-                cell.layer.borderWidth = 2
-                cell.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
-                
+                cell.cellElementsConfig()
             }
-            return cell
+            return cell.cellConfig(cell: cell)
         }
         return UITableViewCell()
     }

@@ -89,9 +89,9 @@
 				4411070C234F7724006B6001 /* JournalTableVCCell.swift */,
 				44E78FA6234CED3900C99D26 /* CreateJournalVC.swift */,
 				44E78FA4234CECF400C99D26 /* JournalTableVC.swift */,
-				44E78FA8234CEDA000C99D26 /* PhotoCollectionVC.swift */,
 				44E78FA2234CEC9600C99D26 /* JournalDetailVC.swift */,
 				4411070A234F5FB0006B6001 /* Model.swift */,
+				44E78FA8234CEDA000C99D26 /* PhotoCollectionVC.swift */,
 				4424DD3223509A4400C811CB /* PhotoCell.swift */,
 				44E78F8E234CE55F00C99D26 /* AppDelegate.swift */,
 				44E78F90234CE55F00C99D26 /* SceneDelegate.swift */,
@@ -208,12 +208,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DayTwo/Pods-DayTwo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/Toucan/Toucan.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toucan.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +393,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nazarDev.DayTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -410,7 +412,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nazarDev.DayTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

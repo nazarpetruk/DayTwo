@@ -17,4 +17,12 @@ class PhotoCell: UICollectionViewCell {
     override func awakeFromNib() {
         super .awakeFromNib()
     }
+    
+    func cellConfig() {
+        
+        imageCellView.layer.cornerRadius = 10
+        imageCellView.layer.masksToBounds = true
+        imageCellView.layer.borderWidth = 3
+        imageCellView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+    }
 }

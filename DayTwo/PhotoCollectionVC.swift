@@ -50,11 +50,8 @@ class PhotoCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
              cell.imageCellView.image = img.smallImg()
              cell.dayLbl.text = img.entry?.dataFormattingDay()
              cell.monthYearlbl.text = img.entry?.dataMonthAndYearString()
-                cell.imageCellView.layer.cornerRadius = 10
-                cell.imageCellView.layer.masksToBounds = true
-                cell.imageCellView.layer.borderWidth = 3
-                cell.imageCellView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
                 
+                cell.cellConfig()
             }
             return cell
         }
