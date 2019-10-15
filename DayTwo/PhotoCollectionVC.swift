@@ -68,4 +68,18 @@ class PhotoCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
         return size
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "photoToDetailVC", sender: images?[indexPath.row].entry)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "photoToDetailVC"{
+            if let entry = sender as? Entry{
+                if let detailVC = segue.destination as? JournalDetailVC{
+                    detailVC.entry = entry
+                }
+            }
+        }
+    }
+    
 }

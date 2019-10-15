@@ -13,17 +13,24 @@
             <objects>
                 <viewController id="fKf-ps-5zv" customClass="JournalDetailVC" customModule="DayTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Go-2p-29A">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIH-za-Yj7">
-                                <rect key="frame" x="0.0" y="20" width="414" height="822"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Soa-Os-yoT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="144.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="282.5"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvj-l0-lJ4">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="W4G-nY-xEE"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMd-ae-0hO">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="144.5"/>
+                                                <rect key="frame" x="0.0" y="138" width="414" height="144.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <string key="text">Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.</string>
@@ -34,6 +41,11 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Rvj-l0-lJ4" secondAttribute="trailing" id="639-kl-xUJ"/>
+                                            <constraint firstItem="Rvj-l0-lJ4" firstAttribute="top" secondItem="Soa-Os-yoT" secondAttribute="top" id="kJy-J6-PnV"/>
+                                            <constraint firstItem="Rvj-l0-lJ4" firstAttribute="leading" secondItem="Soa-Os-yoT" secondAttribute="leading" id="w81-dl-eOL"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,7 +62,7 @@
                         <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BIH-za-Yj7" firstAttribute="trailing" secondItem="ZcA-wP-wAV" secondAttribute="trailing" id="G53-nJ-R6n"/>
-                            <constraint firstItem="BIH-za-Yj7" firstAttribute="top" secondItem="ZcA-wP-wAV" secondAttribute="top" constant="20" id="dFI-Wr-Y7z"/>
+                            <constraint firstItem="BIH-za-Yj7" firstAttribute="top" secondItem="ZcA-wP-wAV" secondAttribute="top" id="dFI-Wr-Y7z"/>
                             <constraint firstAttribute="bottom" secondItem="BIH-za-Yj7" secondAttribute="bottom" id="oSC-vi-j8R"/>
                             <constraint firstItem="BIH-za-Yj7" firstAttribute="leading" secondItem="ZcA-wP-wAV" secondAttribute="leading" id="rmH-Uf-Ih4"/>
                         </constraints>
@@ -176,6 +188,9 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Item" image="icons8-picture-30" selectedImage="icons8-picture-30" id="Olv-zK-GDU"/>
+                    <connections>
+                        <segue destination="fKf-ps-5zv" kind="showDetail" identifier="photoToDetailVC" id="QSS-Z0-F7F"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3v-KS-PsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -484,6 +499,6 @@
         <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FXI-DC-BAN"/>
+        <segue reference="QSS-Z0-F7F"/>
     </inferredMetricsTieBreakers>
 </document>
