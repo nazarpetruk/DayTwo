@@ -22,7 +22,7 @@ class JournalTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DataManager.shared.tableVC = self
         whitePlusBtn.imageView?.contentMode = .scaleAspectFit
         whiteCameraBtn.imageView?.contentMode = .scaleAspectFit
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
@@ -30,11 +30,13 @@ class JournalTableVC: UITableViewController {
          navigationController?.navigationBar.barTintColor = UIColor(red: 0.000, green: 0.836, blue: 0.828, alpha: 1.00)
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         headerView.backgroundColor = UIColor(red: 0.000, green: 0.836, blue: 0.828, alpha: 1.00)
-        
+        getDataFromRealm()
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         getDataFromRealm()
+        tableView.reloadData()
     }
     
     //MARK: IBActions

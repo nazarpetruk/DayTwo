@@ -240,7 +240,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="140" id="Xzr-pu-3Od" customClass="JournalTableVCCell" customModule="DayTwo" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="customCell" rowHeight="140" id="Xzr-pu-3Od" customClass="JournalTableVCCell" customModule="DayTwo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="328" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xzr-pu-3Od" id="edD-eo-Mrj">
@@ -263,43 +263,36 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZM-F0-QMH">
                                             <rect key="frame" x="349" y="10" width="60" height="120"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5tm-pR-nUs">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5tm-pR-nUs">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="120"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeX-mz-Z9E">
-                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="30.5"/>
                                                             <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="EuC-ja-fot"/>
-                                                                <constraint firstAttribute="width" constant="60" id="l8y-M4-zdY"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvw-ms-4sT">
-                                                            <rect key="frame" x="0.0" y="40" width="60" height="40"/>
+                                                            <rect key="frame" x="0.0" y="30.5" width="60" height="59"/>
                                                             <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="60" id="nh6-1e-J7V"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="40"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJi-kP-Zfa">
-                                                            <rect key="frame" x="0.0" y="80" width="60" height="40"/>
+                                                            <rect key="frame" x="0.0" y="89.5" width="60" height="30.5"/>
                                                             <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="K4W-9S-jEa"/>
-                                                                <constraint firstAttribute="width" constant="60" id="cu8-KF-mPl"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="120" id="8Be-41-4hz"/>
+                                                        <constraint firstAttribute="width" constant="60" id="iyj-Tv-zfA"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -343,6 +336,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Home" image="icons8-home-30" selectedImage="icons8-home-30" id="zbU-SQ-LMQ"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="omN-5R-5Gl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                     <connections>
                         <outlet property="headerView" destination="t5t-bj-DyT" id="FRH-eS-bI3"/>
                         <outlet property="whiteCameraBtn" destination="jaN-3T-CjS" id="qak-S6-RBD"/>
@@ -416,7 +412,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTD-9K-4CN">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="85" id="b5T-t7-leS"/>
                                                     <constraint firstAttribute="width" constant="85" id="sZG-Kb-RDM"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="calendar"/>
@@ -426,16 +421,16 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02K-zT-AnN">
                                                 <rect key="frame" x="95" y="0.0" width="85" height="85"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="85" id="cEh-hW-J2U"/>
-                                                    <constraint firstAttribute="width" constant="85" id="vUA-NN-dwG"/>
-                                                </constraints>
                                                 <state key="normal" title="Button" image="cameraColor"/>
                                                 <connections>
                                                     <action selector="cameraBtnPressed:" destination="CIe-KW-sby" eventType="touchUpInside" id="rri-Kq-gdU"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="02K-zT-AnN" firstAttribute="height" secondItem="qTD-9K-4CN" secondAttribute="height" id="LFF-ld-Sev"/>
+                                            <constraint firstItem="02K-zT-AnN" firstAttribute="width" secondItem="qTD-9K-4CN" secondAttribute="width" id="gCA-4V-yyi"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -444,6 +439,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ytN-18-AbC" secondAttribute="trailing" constant="226" id="cqb-nc-DVY"/>
                                     <constraint firstItem="ytN-18-AbC" firstAttribute="centerY" secondItem="JPF-Cw-VEF" secondAttribute="centerY" id="dj8-SW-p8l"/>
                                     <constraint firstItem="ytN-18-AbC" firstAttribute="top" secondItem="IIq-iA-E3F" secondAttribute="top" constant="13" id="ipL-AG-Gcn"/>
+                                    <constraint firstAttribute="height" constant="111" id="uko-uZ-HWa"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="IIq-iA-E3F"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="0nn-Ue-FNJ"/>
@@ -513,6 +509,6 @@
         <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QSS-Z0-F7F"/>
+        <segue reference="FXI-DC-BAN"/>
     </inferredMetricsTieBreakers>
 </document>

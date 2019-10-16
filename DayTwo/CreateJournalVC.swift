@@ -26,6 +26,7 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
     var imagePicker = UIImagePickerController()
     var imagesArray : [UIImage] = []
     var beginWithCam = false
+    var instanceTableView : JournalTableVC!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +92,7 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
             try? realm.write {
                 realm.add(entry)
             }
+            DataManager.shared.tableVC.tableView.reloadData()
             dismiss(animated: true, completion: nil)
         }
     }
