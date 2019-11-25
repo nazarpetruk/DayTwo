@@ -11,4 +11,5 @@ target 'DayTwo' do
   pod 'RealmSwift'
   pod 'Toucan', '~> 1.0.0'
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+  pod 'SwipeCellKit', '2.5.4'
 end

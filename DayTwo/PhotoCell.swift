@@ -14,10 +14,6 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var monthYearlbl: UILabel!
     @IBOutlet weak var dayLbl: UILabel!
     
-    override func awakeFromNib() {
-        super .awakeFromNib()
-    }
-    
     func cellConfig() {
         
         imageCellView.layer.cornerRadius = 10

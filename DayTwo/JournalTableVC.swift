@@ -8,9 +8,10 @@
 
 import UIKit
 import RealmSwift
+import SwipeCellKit
 
-class JournalTableVC: UITableViewController {
-    
+class JournalTableVC: UITableViewController, SwipeTableViewCellDelegate{
+  
     //MARK: IBOutlets
     @IBOutlet weak var whiteCameraBtn: UIButton!
     @IBOutlet weak var whitePlusBtn: UIButton!
@@ -19,6 +20,7 @@ class JournalTableVC: UITableViewController {
     
     //MARK: Vars & Const
     var entries : Results<Entry>?
+    var images : Results<Picture>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +98,7 @@ class JournalTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as? JournalTableVCCell {
+            cell.delegate = self
             if let entry = entries?[indexPath.row] {
                 cell.userTextLbl.text = entry.userDayDesc
                 if let image = entry.picture.first?.smallImg(){
@@ -125,4 +128,54 @@ class JournalTableVC: UITableViewController {
              performSegue(withIdentifier: "toDetail", sender: entry)
         }
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+         guard orientation == .right else { return nil }
+        let deleteSwipe = SwipeAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            self.deletePicture(indexPath: indexPath.row)
+            self.deleteEntries(indexPath: indexPath.row)
+            do {
+                
+                action.fulfill(with: .delete)
+                tableView.reloadData()
+            }
+        }
+        deleteSwipe.fulfill(with: .delete)
+        deleteSwipe.backgroundColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        deleteSwipe.image = UIImage(named: "delete64")
+        return [deleteSwipe]
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .destructive(automaticallyDelete: false)
+        options.expansionStyle = .destructiveAfterFill
+        options.backgroundColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        return options
+    }
+    
+    func deleteEntries(indexPath: Int){
+        if let item = self.entries?[indexPath]{
+                   do{
+                       try self.entries?.realm!.write{
+                           self.entries?.realm!.delete(item)
+                       }
+                   }catch{
+                      print("Error while deleting item, \(error)")
+                   }
+               }
+    }
+    
+    func deletePicture(indexPath: Int) {
+        if let item = self.images?[indexPath]{
+            do{
+                try self.images?.realm!.write{
+                    self.images?.realm!.delete(item)
+                }
+            }catch{
+               print("Error while deleting item, \(error)")
+            }
+        }
+    }
+    
 }

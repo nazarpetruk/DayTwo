@@ -20,17 +20,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Soa-Os-yoT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="282.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvj-l0-lJ4">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="W4G-nY-xEE"/>
+                                                    <constraint firstAttribute="height" constant="50" id="W4G-nY-xEE"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMd-ae-0hO">
-                                                <rect key="frame" x="0.0" y="138" width="414" height="144.5"/>
+                                                <rect key="frame" x="0.0" y="60" width="414" height="144.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.80784313730000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <string key="text">Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.Just alot of text about your great day and people around messing up with you.</string>
@@ -336,9 +336,6 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Home" image="icons8-home-30" selectedImage="icons8-home-30" id="zbU-SQ-LMQ"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="omN-5R-5Gl">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </refreshControl>
                     <connections>
                         <outlet property="headerView" destination="t5t-bj-DyT" id="FRH-eS-bI3"/>
                         <outlet property="whiteCameraBtn" destination="jaN-3T-CjS" id="qak-S6-RBD"/>

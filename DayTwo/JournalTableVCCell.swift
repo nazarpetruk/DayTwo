@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class JournalTableVCCell: UITableViewCell {
+class JournalTableVCCell: SwipeTableViewCell {
 
     @IBOutlet weak var constraintToResizeImg: NSLayoutConstraint!
     @IBOutlet weak var yearLbl: UILabel!

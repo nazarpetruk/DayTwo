@@ -15,7 +15,6 @@ class PhotoCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
     var images : Results<Picture>?
     
     override func viewDidLoad() {
-        getPictures()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,12 +45,13 @@ class PhotoCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell {
             
-            if let img = images?[indexPath.row]{
+            if let img = images?[indexPath.row] {
              cell.imageCellView.image = img.smallImg()
              cell.dayLbl.text = img.entry?.dataFormattingDay()
              cell.monthYearlbl.text = img.entry?.dataMonthAndYearString()
                 
                 cell.cellConfig()
+                
             }
             return cell
         }
@@ -78,5 +78,4 @@ class PhotoCollectionVC: UICollectionViewController, UICollectionViewDelegateFlo
             }
         }
     }
-    
 }

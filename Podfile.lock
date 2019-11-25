@@ -5,17 +5,20 @@ PODS:
   - RealmSwift (3.16.2):
     - Realm (= 3.16.2)
   - Spring (1.0.6)
+  - SwipeCellKit (2.5.4)
   - Toucan (1.0.0)
 
 DEPENDENCIES:
   - RealmSwift
   - Spring (from `https://github.com/MengTo/Spring.git`)
+  - SwipeCellKit (= 2.5.4)
   - Toucan (~> 1.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Realm
     - RealmSwift
+    - SwipeCellKit
     - Toucan
 
 EXTERNAL SOURCES:
@@ -31,8 +34,9 @@ SPEC CHECKSUMS:
   Realm: 0e73b4edeb5b6a90da3d83206883b2e34e00eb38
   RealmSwift: a81e650171ef0a5f999df1ed8d39ba8d6fce88a4
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  SwipeCellKit: 4eada3884ab1bbae5e8d2fb9030c242aa23d7f42
   Toucan: 61867fb10948c02e9804280a95eb183e98eac97a
 
-PODFILE CHECKSUM: 5142065d3c83aaca5eab860045d56719471ae081
+PODFILE CHECKSUM: a554f2a399b46b103f6924135ae9da2ea2338267
 
 COCOAPODS: 1.5.2

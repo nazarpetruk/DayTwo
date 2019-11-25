@@ -41,12 +41,12 @@ class JournalDetailVC: UIViewController {
                 for img in entry.picture{
                     let imageView = UIImageView()
                     imageView.contentMode = .scaleAspectFill
-                    let ratio = img.fullImg().size.height / img.fullImg().size.width
+                    //let ratio = img.fullImg().size.height / img.fullImg().size.width
                     imageView.image = img.fullImg()
                     
                     detailStackView.addArrangedSubview(imageView)
                     imageView.widthAnchor.constraint(equalTo: detailStackView.widthAnchor, multiplier: 1.0).isActive = true
-                    imageView.heightAnchor.constraint(equalTo: detailStackView.widthAnchor, multiplier: ratio).isActive = true
+                    imageView.heightAnchor.constraint(equalTo: detailStackView.widthAnchor, multiplier: 1.0).isActive = true
                     imageView.layer.cornerRadius = 10
                     imageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
                     imageView.layer.borderWidth = 2
