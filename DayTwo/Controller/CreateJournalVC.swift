@@ -39,7 +39,7 @@ class CreateJournalVC: UIViewController, UIImagePickerControllerDelegate, UINavi
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         scrollViewBottom.layer.cornerRadius = 7
         scrollViewBottom.layer.borderWidth = 1
-        scrollViewBottom.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        scrollViewBottom.layer.borderColor = #colorLiteral(red: 0, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
         scrollViewBottom.layer.masksToBounds = true
     }
     

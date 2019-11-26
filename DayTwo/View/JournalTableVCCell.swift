@@ -23,7 +23,7 @@ class JournalTableVCCell: SwipeTableViewCell {
     func cellElementsConfig() {
         
         cellImgView.layer.cornerRadius = 60
-        cellImgView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        cellImgView.layer.borderColor = #colorLiteral(red: 0.06274509804, green: 0.6745098039, blue: 0.5176470588, alpha: 1)
         cellImgView.layer.borderWidth = 1
         cellImgView.layer.masksToBounds = true
         viewForStackConfig.layer.cornerRadius = 10
@@ -34,7 +34,7 @@ class JournalTableVCCell: SwipeTableViewCell {
         
         cell.layer.cornerRadius = 12
         cell.layer.borderWidth = 2
-        cell.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        cell.layer.borderColor = #colorLiteral(red: 0.06274509804, green: 0.6745098039, blue: 0.5176470588, alpha: 1)
         
         return cell
     }

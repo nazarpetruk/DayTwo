@@ -29,9 +29,9 @@ class JournalTableVC: UITableViewController, SwipeTableViewCellDelegate{
         whiteCameraBtn.imageView?.contentMode = .scaleAspectFit
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         navigationController?.navigationBar.isTranslucent = false
-         navigationController?.navigationBar.barTintColor = UIColor(red: 0.000, green: 0.836, blue: 0.828, alpha: 1.00)
+         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
         navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        headerView.backgroundColor = UIColor(red: 0.000, green: 0.836, blue: 0.828, alpha: 1.00)
+        headerView.backgroundColor = #colorLiteral(red: 0, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
         getDataFromRealm()
     }
     
@@ -78,16 +78,6 @@ class JournalTableVC: UITableViewController, SwipeTableViewCellDelegate{
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-//    func gradColor(bound : CGRect) -> CAGradientLayer{
-//        let gradient = CAGradientLayer()
-//        let startColor = UIColor(cgColor: CGColor(srgbRed: 2, green: 170, blue: 176, alpha: 1))
-//        let endColor = UIColor(cgColor: CGColor(srgbRed: 0, green: 205, blue: 172, alpha: 1))
-//        gradient.colors = [startColor.cgColor, endColor.cgColor]
-//        gradient.frame = bound
-//
-//        return gradient
-//    }
     
     // MARK: - Table view data source
     
@@ -141,7 +131,7 @@ class JournalTableVC: UITableViewController, SwipeTableViewCellDelegate{
             }
         }
         deleteSwipe.fulfill(with: .delete)
-        deleteSwipe.backgroundColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        deleteSwipe.backgroundColor = #colorLiteral(red: 0, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
         deleteSwipe.image = UIImage(named: "delete64")
         return [deleteSwipe]
     }
@@ -150,7 +140,7 @@ class JournalTableVC: UITableViewController, SwipeTableViewCellDelegate{
         var options = SwipeOptions()
         options.expansionStyle = .destructive(automaticallyDelete: false)
         options.expansionStyle = .destructiveAfterFill
-        options.backgroundColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        options.backgroundColor = #colorLiteral(red: 0, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
         return options
     }
     

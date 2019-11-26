@@ -29,7 +29,7 @@ class JournalDetailVC: UIViewController {
     //MARK: Config Func
     func lblConfig(){
         userDayDescLbl.layer.cornerRadius = 10
-        userDayDescLbl.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+        userDayDescLbl.layer.borderColor = #colorLiteral(red: 0, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
         userDayDescLbl.layer.borderWidth = 2
         userDayDescLbl.layer.masksToBounds = true
     }
@@ -48,7 +48,7 @@ class JournalDetailVC: UIViewController {
                     imageView.widthAnchor.constraint(equalTo: detailStackView.widthAnchor, multiplier: 1.0).isActive = true
                     imageView.heightAnchor.constraint(equalTo: detailStackView.widthAnchor, multiplier: 1.0).isActive = true
                     imageView.layer.cornerRadius = 10
-                    imageView.layer.borderColor = #colorLiteral(red: 0, green: 0.8361462951, blue: 0.8281900883, alpha: 1)
+                    imageView.layer.borderColor = #colorLiteral(red: 0, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
                     imageView.layer.borderWidth = 2
                     imageView.layer.masksToBounds = true
                 }
