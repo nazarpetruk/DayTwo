@@ -43,7 +43,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Rvj-l0-lJ4" secondAttribute="trailing" id="639-kl-xUJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="vMd-ae-0hO" secondAttribute="trailing" id="G0P-VC-h8I"/>
                                             <constraint firstItem="Rvj-l0-lJ4" firstAttribute="top" secondItem="Soa-Os-yoT" secondAttribute="top" id="kJy-J6-PnV"/>
+                                            <constraint firstItem="vMd-ae-0hO" firstAttribute="leading" secondItem="Soa-Os-yoT" secondAttribute="leading" id="twU-k6-WDc"/>
                                             <constraint firstItem="Rvj-l0-lJ4" firstAttribute="leading" secondItem="Soa-Os-yoT" secondAttribute="leading" id="w81-dl-eOL"/>
                                         </constraints>
                                     </stackView>
